@@ -1,10 +1,10 @@
-const { response } = require("express");
+
 var Express = require("express");
 
 
 var app = Express();
 
-app.get("/", (request, respond) => {
+app.get("/", (request, response) => {
     response.status(200).send("The polyglot tester");
 });
 
@@ -19,10 +19,3 @@ var server = app.listen(3000, () => {
 
 
 module.exports = server;
-
-// function add(x, y) {
-//     return x + y;
-// }
-
-// module.exports = add;
-
