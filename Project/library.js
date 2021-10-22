@@ -17,7 +17,7 @@ app.get("/books", (request, response) => {
 });
 
 app.get("/books/:id", (request, response) => {
-    response.status(204).send('id: ' + request.query.id);
+    response.status(200).send('id: ' + request.query.id);
 });
 
 var server = app.listen(3000, () => {

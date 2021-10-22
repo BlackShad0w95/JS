@@ -63,7 +63,7 @@ describe("Server", () => {
     describe("GET book by ID library/", () => {
         var data = {};
         beforeAll((done) => {
-            Request.get("http://localhost:3000/books/?1029", (error, response, body) => {
+            Request.get("http://localhost:3000/books/20", (error, response, body) => {
                 data.status = response.statusCode;
                 data.body = body;
                 done();
@@ -73,7 +73,7 @@ describe("Server", () => {
             expect(data.status).toBe(200);
         });
         it("Library get proper book GET book", () => {
-            expect(data.body).toBe("List of all available books");
+            expect(data.body).toBe("id: 20");
         });
     });
 
